@@ -8,7 +8,7 @@ function Grid() {
     <div className='flex w-full flex-wrap mx-auto my-20 justify-center'>
       {workDatabase.map((item) => (
         <div className='relative' key={item.id}>
-          <Image src={item.link} alt={item.alt} width={300} height={300} className='w-[300px] h-[300px] object-fit'></Image>
+          <Image src={item.link} alt={item.alt} width={300} height={300} className='w-[200px] h-[200px] md:w-[300px] md:h-[300px] object-fit'></Image>
           <div className='duration-200 hover:opacity-80 absolute top-0 left-0 w-full h-full bg-black opacity-0 flex justify-center items-center cursor-pointer'>
             <p className='text-white uppercase'>{item.label}</p>
           </div>
