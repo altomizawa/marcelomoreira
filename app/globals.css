@@ -177,3 +177,11 @@
 .work__link-text{
   @apply text-xs text-center
 }
+
+.workpopup{
+  @apply fixed top-[100%] left-0 w-screen h-screen bg-black pt-32 flex flex-col gap-5 duration-300;
+}
+
+.workpopup_active{
+  @apply fixed top-24 left-0 w-screen h-screen bg-black pt-32 flex flex-col gap-5 duration-300;
+}
