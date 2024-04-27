@@ -9,11 +9,11 @@
 }
 
 .mobile-nav{
-  @apply fixed w-screen h-screen object-left-top flex flex-col justify-center items-center bg-gray-700 translate-x-[0%] duration-200 ease-in-out
+  @apply flex flex-col justify-center items-center bg-[#C1AB92] translate-x-[0%] duration-300 ease-in-out h-screen
 }
 
 .mobile-nav_inactive{
-  @apply translate-x-[100%]
+  @apply translate-x-[100%] h-0 rounded-full
 }
 
 .menu-icon{
@@ -149,4 +149,31 @@
 }
 .home__quote {
   @apply border-black border-b-2 border-t-2 p-10 lg:text-2xl uppercase text-black font-light leading-loose tracking-wide lg:tracking-widest;
+}
+
+.work__link-wrapper{
+  @apply cursor-pointer border border-white rounded-lg p-3 w-20 flex flex-col items-center justify-start
+}
+.work__link-wrapper_active{
+  @apply border-none bg-gray-200
+}
+
+.work__link-wrapper:hover{
+  @apply border-black
+}
+
+.work__link-wrapper:hover .work__link{
+  @apply opacity-100
+}
+
+.work__link{
+  @apply m-auto w-7 h-7 opacity-40
+}
+
+.work__link_active{
+  @apply opacity-100;
+}
+
+.work__link-text{
+  @apply text-xs text-center
 }
