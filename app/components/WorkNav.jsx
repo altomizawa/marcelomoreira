@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, useContext } from 'react'
+import { useParams } from 'next/navigation'
 
 import Link from 'next/link'
 import Image from 'next/image'
@@ -16,11 +17,14 @@ import miscellaneous from '../../public/images/work/miscellaneous.svg'
 
 import { CategoryContext } from '../contexts/categoryContext'
 
-function WorkNav({ filter }) {
+function WorkNav() {
+  const params = useParams();
+  const filter = params.category;
+
   const [iconHoverStatus, setIconHoverStatus] = useState(false)
 
   return (
-    <nav className='pt-4 pb-4 mx-auto flex justify-left lg:justify-center px-10 gap-8 w-full overflow-x-auto'>
+    <nav className='fixed top-0 left-0 pt-24 pb-4 mx-auto flex justify-left lg:justify-center px-10 gap-8 w-full overflow-x-auto bg-white z-10'>
       <Link href='/work/artwork' className={filter==='artwork' ? 'work__link-wrapper work__link-wrapper_active' : 'work__link-wrapper'}> 
         <Image src={artwork} alt='artwork icon' width={40} height={40} className={filter==='artwork' ? 'work__link work__link_active' : 'work__link'} />  
         <p className='work__link-text' alt='artwork icon'>artwork</p>

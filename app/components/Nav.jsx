@@ -15,7 +15,7 @@ function Nav() {
   }
   return (
     <>
-      <div className={isWorkNavOpen ? 'w-full fixed top-0 left-0 z-10 pt-10 bg-white' : 'w-full fixed top-0 left-0 z-20 pt-10'}>
+      <div className={isWorkNavOpen ? 'w-full fixed top-0 left-0 z-20 pt-10 bg-white' : 'w-full fixed top-0 left-0 z-20 pt-10'}>
         <nav className='justify-center hidden md:flex'>
           <Link className='nav__link nav__link_left' onClick={()=>setIsWorkNavOpen(false)} href={'/'}>ABOUT ME</Link>
           <Link className='nav__link' href={'/work/artwork'} onClick={()=>setIsWorkNavOpen(true)}>WORK</Link>
@@ -25,7 +25,7 @@ function Nav() {
 
 
       {/* MOBILE NAVIGATION */}
-      <div className='w-full fixed top-0 left-0 z-10'>
+      <div className='w-full fixed top-0 left-0 z-20'>
         <nav className='relative mt-0 md:hidden'>
           <Image alt='menu_icon' src={isMenuOpen ? menuIconWhite : menuIcon} className={isMenuOpen ? 'menu-icon' : 'menu-icon menu-icon_inactive'} width={40} onClick={handleMenu}/>
           <div className={isMenuOpen ? 'mobile-nav' : 'mobile-nav mobile-nav_inactive'}>

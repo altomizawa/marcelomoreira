@@ -19,10 +19,10 @@ function Grid({filter}) {
   }
 
   return (
-    <div className='mt-6 flex w-full flex-wrap justify-center relative'>
+    <div className='mt-16 flex w-full flex-wrap justify-center relative gap-1'>
       {filteredWork.map((item) => (
         <div className='relative' key={item.id} onClick={() => {handleWorkClick(item)}}>
-          <Image src={item.link} alt={item.alt} width={300} height={300} className='w-[200px] h-[200px] md:w-[300px] md:h-[300px] object-fit'></Image>
+          <Image src={item.link} alt={item.alt} width={300} height={300} className='w-[80vw] aspect-square md:w-[300px] object-cover'></Image>
           <div className='duration-200 hover:opacity-80 absolute top-0 left-0 w-full h-full bg-black opacity-0 flex justify-center items-center cursor-pointer'>
             <p className='text-white uppercase'>{item.collection}</p>
           </div>
