@@ -3,12 +3,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useContext, useEffect, useState } from 'react'
-
+import { useParams } from 'next/navigation'
 import WorkPopup from './WorkPopup'
 import workDatabase from '../database/database'
 
-function Grid({filter}) {
-  const filteredWork = workDatabase.filter((category) => category.category===filter && category.cover===true)
+function Grid() {
+  const { category } = useParams();
+
+  const filteredWork = workDatabase.filter((work) => work.category===category && work.cover===true)
   const [isWorkPopupOpen, setIsWorkPopupOpen] = useState(false)
   const [collection, setCollection] =  useState([])
 

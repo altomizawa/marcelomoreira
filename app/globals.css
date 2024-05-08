@@ -183,7 +183,7 @@
 }
 
 .workpopup_active{
-  @apply fixed top-0 left-0 w-screen h-screen bg-zinc-800 duration-300 flex flex-col items-center z-30;
+  @apply fixed top-0 left-0 w-screen h-screen bg-zinc-800 duration-300 flex flex-col items-center z-30 bg-red-800;
 }
 
 .navigation__button{

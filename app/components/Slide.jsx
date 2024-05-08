@@ -2,7 +2,6 @@ import Image from 'next/image'
 import blackwhite3 from '@/public/images/work/artwork/black&white/blackwhite1-1000x1000.jpg'
 
 function Slide({ item }) {
-  console.log(item)
   return (
     <div>
       <div className='flex flex-col'>
