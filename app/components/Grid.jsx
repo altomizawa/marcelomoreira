@@ -28,17 +28,18 @@ function Grid() {
   }
 
   return (
-    <div className='flex w-[100%] md:w-[80%] items-center mx-auto mt-24 border border-zinc-800 rounded-3xl overflow-hidden'>
+    <div className='flex max-w-[1024px] w-[95%] md:w-[90%] lg:w-[80%] items-center justify-between mx-auto mt-24 border border-zinc-400 rounded-3xl overflow-hidden'>
       <nav className='flex flex-col gap-8 w-1/2'>
         {filteredWork.map((item) => {
+          const collectionAsUrl = item.collection.replace(/\s/g, '').toLowerCase()
           return (
             <div key={item.id} className='flex flex-col items-center'>
-              <Link href={item.link} className='work__collection-link relative text-xl text-center' onMouseEnter={() => {changeImageUrl(item.link)}}>{item.collection}</Link>
+              <Link href={`/work/${category}/${collectionAsUrl}`} className='work__collection-link relative text-xl text-center' onMouseEnter={() => {changeImageUrl(item.link)}}>{item.collection}</Link>
             </div>
           )
         })}
       </nav>
-          <Image src={collectionThumb} height={500} width={500} alt='thumbnail' className='w-1\2 min-h-[500px] object-cover '/>
+          <Image src={collectionThumb} height={500} width={500} alt='thumbnail' className='w-1\2 object-cover'/>
     </div>
     // <div className='mt-16 flex w-full flex-wrap justify-center relative gap-1'>
     //   {filteredWork.map((item) => (
