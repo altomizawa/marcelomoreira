@@ -28,19 +28,17 @@ function Grid() {
   }
 
   return (
-    <div className='flex justify-between items-center px-24 mt-24'>
-      <nav className='flex flex-col gap-8'>
+    <div className='flex w-[100%] md:w-[80%] items-center mx-auto mt-24 border border-zinc-800 rounded-3xl overflow-hidden'>
+      <nav className='flex flex-col gap-8 w-1/2'>
         {filteredWork.map((item) => {
           return (
-            <div key={item.id}>
-              <Link href={item.link} className='work__collection-link relative text-2xl' onMouseEnter={() => {changeImageUrl(item.link)}}>{item.collection}</Link>
+            <div key={item.id} className='flex flex-col items-center'>
+              <Link href={item.link} className='work__collection-link relative text-xl text-center' onMouseEnter={() => {changeImageUrl(item.link)}}>{item.collection}</Link>
             </div>
           )
         })}
       </nav>
-        <div className='bg-zinc-400 flex justify-center items-center p-12 rounded-lg'>
-          <Image src={collectionThumb} height={600} width={600} alt='thumbnail' className='w-[400px] h-[400px]'/>
-        </div>
+          <Image src={collectionThumb} height={500} width={500} alt='thumbnail' className='w-1\2 min-h-[500px] object-cover '/>
     </div>
     // <div className='mt-16 flex w-full flex-wrap justify-center relative gap-1'>
     //   {filteredWork.map((item) => (
