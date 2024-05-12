@@ -1,16 +1,22 @@
 'use client'
 
 import { useState } from 'react'
+import { useParams } from 'next/navigation'
 import Image from 'next/image'
 import sliderArrow from '@/public/images/slider-arrow.svg'
 import lips1 from '@/public/images/work/3dmodeling/lipsPendant1.jpg'
 import lips2 from '@/public/images/work/3dmodeling/lipsPendant2.jpg'
 import lips3 from '@/public/images/work/3dmodeling/lipsPendant3.jpg'
 import workDatabase from '@app/database/database'
+import Link from 'next/link'
 
 
 
 export default function page() {
+  const params = new useParams();
+
+  console.log(params.category, params.collection)
+
   const [description, setDescription] = useState(false);
   const [index, setIndex] = useState(0);
 
@@ -49,7 +55,7 @@ export default function page() {
           <div className='w-full h-full flex justify-center shrink-0'>
             <div className='w-[50%] h-[80%]'>
               <div className='w-full h-full'>
-                <h2 className='text-white'>Drained</h2>
+                <h2 className='text-white'>{params.collection}</h2>
                 <div className='bg-white w-full h-px'></div>
                 <button className='text-white w-full text-right' onClick={() => {setDescription(prevState => !prevState)}}>{description===true ? '(hide description) ▲' : '(show description) ▼'}</button>
                 <div className='mt-4 relative h-full w-full overflow-hidden'>
@@ -73,7 +79,7 @@ export default function page() {
             </div>
           </div>
         </div>
-      <button className='px-8 py-2 border border-white text-white rounded-lg absolute top-56 left-16 cursor-pointer transition duration-200 ease-out hover:bg-white hover:text-black'>BACK</button>
+      <Link href={`/work/${params.category}`} className='px-8 py-2 border border-white text-white rounded-lg absolute top-56 left-16 cursor-pointer transition duration-200 ease-out hover:bg-white hover:text-black'>BACK</Link>
         
         <div className='flex items-center mr-12'>
           <button className='border border-grey-300 rounded-full p-4 hover:bg-zinc-500'><Image src={sliderArrow} width={30} alt='slider arrow' onClick={nextImage} /></button>
