@@ -24,7 +24,7 @@ function WorkNav() {
   const [iconHoverStatus, setIconHoverStatus] = useState(false)
 
   return (
-    <nav className='fixed top-0 left-0 pt-24 pb-4 mx-auto flex justify-left lg:justify-center px-10 gap-8 w-full overflow-x-auto bg-white z-10'>
+    <nav className='fixed top-0 left-0 pt-24 pb-4 mx-auto flex justify-left lg:justify-center px-10 gap-8 w-full overflow-x-auto bg-white z-10 opacity-30'>
       <Link href='/work/artwork' className={filter==='artwork' ? 'work__link-wrapper work__link-wrapper_active' : 'work__link-wrapper'}> 
         <Image src={artwork} alt='artwork icon' width={40} height={40} className={filter==='artwork' ? 'work__link work__link_active' : 'work__link'} />  
         <p className='work__link-text' alt='artwork icon'>artwork</p>

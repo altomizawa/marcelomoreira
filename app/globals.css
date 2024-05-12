@@ -217,3 +217,56 @@
 /* *{
   border: solid 1px white;
 } */
+
+.slider{
+  padding-top: 2rem;
+  width: 100vw;
+  height: 100%;
+  overflow-x: auto;
+  display: inline-flex;
+}
+
+.slide__wrapper{
+  width: 100%;
+  overflow-x: auto;
+}
+
+.slide{
+  width: 4 0%;
+  height: 100%;
+  margin-inline: auto;
+}
+
+
+.slide__title{
+  color: white;
+}
+
+.slide__title-divider{
+  height: 1px;
+  width: 100%;
+  background-color: white;
+}
+
+.slide__open-description{
+  width: 100%;
+  color: white;
+  text-align: right;
+}
+
+.slide__image-wrapper{
+  position: relative;
+}
+
+.slide__text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: gray;
+  background-color: white;
+}
+
+.slide__image{
+  width: 100%;
+}
+
