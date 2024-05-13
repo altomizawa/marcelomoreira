@@ -412,7 +412,7 @@ const workDatabase = [
   },
   {
     category: 'artwork',
-    collection: 'Hallucinations of a hummingbird',
+    collection: 'hallucinations of a hummingbird',
     title: "Hallucinations of a hummingbird - natural evolution x cultural evolution (or Anthropocene Era)",
     description: "Art installation: organic and artificial flowers; customized irrigation system runs by optical sensor activated by visitor; customized draining system with power pump and floater regulator.",
     size: '118x118x118in (300x300x300cm)',
@@ -423,7 +423,7 @@ const workDatabase = [
   },
   {
     category: 'artwork',
-    collection: 'Hallucinations of a hummingbird',
+    collection: 'hallucinations of a hummingbird',
     title: "Hallucinations of a hummingbird - natural evolution x cultural evolution (or Anthropocene Era)",
     description: "Art installation: organic and artificial flowers; customized irrigation system runs by optical sensor activated by visitor; customized draining system with power pump and floater regulator.",
     size: '118x118x118in (300x300x300cm)',
@@ -434,7 +434,7 @@ const workDatabase = [
   },
   {
     category: 'artwork',
-    collection: 'Hallucinations of a hummingbird',
+    collection: 'hallucinations of a hummingbird',
     title: "Hallucinations of a hummingbird - natural evolution x cultural evolution (or Anthropocene Era)",
     description: "Art installation: organic and artificial flowers; customized irrigation system runs by optical sensor activated by visitor; customized draining system with power pump and floater regulator.",
     size: '118x118x118in (300x300x300cm)',
@@ -445,7 +445,7 @@ const workDatabase = [
   },
   {
     category: 'artwork',
-    collection: 'Hallucinations of a hummingbird',
+    collection: 'hallucinations of a hummingbird',
     title: "Hallucinations of a hummingbird - natural evolution x cultural evolution (or Anthropocene Era)",
     description: "Art installation: organic and artificial flowers; customized irrigation system runs by optical sensor activated by visitor; customized draining system with power pump and floater regulator.",
     size: '118x118x118in (300x300x300cm)',
