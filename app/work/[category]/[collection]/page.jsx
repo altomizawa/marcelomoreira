@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'next/navigation'
 import Image from 'next/image'
 import sliderArrow from '@/public/images/slider-arrow.svg'
@@ -13,12 +13,12 @@ import { getCollection } from '@app/utils/getCollection'
 
 
 
-export default function page() {
+export default function Collection() {
   const params = new useParams();
   const currentCollection = getCollection(params.collection)
 
   const [description, setDescription] = useState(false);
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(100);
 
   const filteredDatabase = workDatabase.filter((item) => item.collection.toLowerCase() === currentCollection.toLowerCase())
   const heroImage = workDatabase.filter((item) => item.collection.toLowerCase() === currentCollection.toLowerCase() && item.cover === true);
@@ -27,20 +27,21 @@ export default function page() {
   }
 
   const nextImage = () => {
-    console.log(index)
-    setIndex(prevState => prevState+1)
+    console.log(index, filteredDatabase.length)
+    setIndex(prevState => prevState+100)
     console.log(index)
   }
 
   const previousImage = () => {
     console.log(index)
-    if(index===0) {
-      return
-    }
-    setIndex(prevState => prevState-1)
+    setIndex(prevState => prevState-100)
   }
 
-  const carousel = `w-screen flex -translate-x-full`
+  // const slides = document.querySelector('.carrossel')
+  // slides.style.transform = `translateX(-${index*100}%)`
+  
+
+  const carousel = `w-screen flex -translate-x-[350%] duration-200 ease-out`
 
   return (
     <div className='w-full h-screen pt-56 px-16 relative top-0 left-0 bg-zinc-600 flex justify-between bg-black'>
@@ -48,7 +49,7 @@ export default function page() {
         <div className='flex items-center ml-12'>
           <button className='rotate-180 border border-grey-300 rounded-full p-4 hover:bg-zinc-500 z-10'><Image src={sliderArrow} width={30} alt='slider arrow' onClick={previousImage} /></button>
         </div>
-        <div className={`w-screen flex -translate-x-[${index*100}%] duration-200 ease-out`}>
+        <div className={`carrossel ${carousel}`}>
         {filteredDatabase.map((item) => {
           return(
             <>
@@ -100,10 +101,6 @@ export default function page() {
         <div className='flex items-center mr-12'>
           <button className='border border-grey-300 rounded-full p-4 hover:bg-zinc-500 z-400'><Image src={sliderArrow} width={30} alt='slider arrow' onClick={nextImage} /></button>
         </div>
-      </div>
-
-      <div className='flex items-center'>
-        {/* <button className='border border-grey-300 rounded-full p-4 hover:bg-zinc-500'><Image src={sliderArrow} width={30} alt='slider arrow' /></button> */}
       </div>
     </div>
   )
