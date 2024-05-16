@@ -39,19 +39,8 @@ function Grid() {
           )
         })}
       </nav>
-          <Image src={collectionThumb} height={500} width={500} alt='thumbnail' className='w-1\2 object-cover'/>
+          <Image src={collectionThumb} height={500} width={500} alt='thumbnail' className='w-[400] aspect-square object-cover'/>
     </div>
-    // <div className='mt-16 flex w-full flex-wrap justify-center relative gap-1'>
-    //   {filteredWork.map((item) => (
-    //     <div className='relative' key={item.id} onClick={() => {handleWorkClick(item)}}>
-    //       <Image src={item.link} alt={item.alt} width={300} height={300} className='w-[80vw] aspect-square md:w-[300px] object-cover'></Image>
-    //       <div className='duration-200 hover:opacity-80 absolute top-0 left-0 w-full h-full bg-black opacity-0 flex justify-center items-center cursor-pointer'>
-    //         <p className='text-white uppercase'>{item.collection}</p>
-    //       </div>
-    //     </div>
-    //   ))}
-    //   <WorkPopup isWorkPopupOpen={isWorkPopupOpen} setIsWorkPopupOpen={setIsWorkPopupOpen} collection={collection} />
-    // </div>
   )
 }
 
