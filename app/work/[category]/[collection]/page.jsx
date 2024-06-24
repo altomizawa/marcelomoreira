@@ -49,10 +49,10 @@ export default function Collection() {
 
 
   return (
-    <div className='w-full h-screen pt-56 px-16 relative top-0 left-0 bg-zinc-600 flex justify-between bg-black'>
-      <div className='w-full flex items-center overflow-hidden'>
-        <button className={filteredDatabase.length !== 1 ? 'rotate-180 border border-grey-300 rounded-full p-4 hover:bg-zinc-500 z-10': 'hidden'}><Image src={sliderArrow} width={30} alt='slider arrow' onClick={() => {setImageIndex(previousImage)}} /></button>
-        <div className={`w-[70%] m-auto flex translate-x-[${-100*imageIndex}%] duration-200 z-0`}>
+    <div className='w-screen h-screen pt-56 px-16 relative top-0 left-0 bg-zinc-600 flex bg-black'>
+      <div className='w-full flex items-center'>
+        <button className={filteredDatabase.length !== 1 ? 'rotate-180 border border-grey-300 rounded-full p-4 hover:bg-zinc-500 z-10 shrink-0': 'hidden'}><Image src={sliderArrow} width={30} alt='slider arrow' onClick={() => {setImageIndex(previousImage)}} /></button>
+        <div className={`w-full flex translate-x-[${-100*imageIndex}%] duration-200 z-0`}>
           {filteredDatabase.map((item) => {
             return(
               <>
@@ -73,7 +73,7 @@ export default function Collection() {
             )
           })}
         </div>
-        <button className={filteredDatabase.length !== 1 ? 'border border-grey-300 rounded-full p-4 hover:bg-zinc-500 z-10': 'hidden'}><Image src={sliderArrow} width={30} alt='slider arrow' onClick={() => {setImageIndex(nextImage)}} /></button>
+        <button className={filteredDatabase.length !== 1 ? 'border border-grey-300 rounded-full p-4 hover:bg-zinc-500 z-10 shrink-0': 'disabled'}><Image src={sliderArrow} width={30} alt='slider arrow' onClick={() => {setImageIndex(nextImage)}} /></button>
       <Link href={`/work/${params.category}`} className='px-8 py-2 border border-white text-white rounded-lg absolute top-56 left-16 cursor-pointer transition duration-200 ease-out hover:bg-white hover:text-black'>BACK</Link>
       </div>
     </div>
